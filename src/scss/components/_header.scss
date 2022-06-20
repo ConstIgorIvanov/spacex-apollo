@@ -1,0 +1,17 @@
+.header {
+  margin-bottom: 50px;
+  position: relative;
+}
+.header--info {
+  width: 700px;
+  left: 15%;
+  font-weight: 700;
+  position: absolute;
+  border: 1px solid $gray-line;
+  padding: 20px;
+  background-color: #ffff;
+}
+.header--info span {
+  margin-left: 10px;
+  font-weight: 400;
+}

@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import Header from './components/Header';
+import Hero from './components/Hero';
+import List from './components/List';
+import ListItem from './components/ListItem';
+
+import useItems from './hooks/useItems';
+
+import { Explorer, Item } from './types/explorer';
+import { Company } from './types/company';
+
+import './scss/app.scss';
+
+const App: React.FC = () => {
+  const [explorer, setExplorer] = React.useState<Explorer>(Explorer.missions);
+  const [items, setItems, refetch] = useItems(explorer || Explorer.missions);
+  const [item, setItem] = React.useState<Item>();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header company={{} as Company}></Header>
+      <div className="main">
+        <List
+          setExplorer={setExplorer}
+          explorer={explorer || Explorer.missions}
+          items={items}
+          renderItem={(user) => <ListItem explorer={explorer || Explorer.missions} item={user} />}
+        />
+        <Hero item={item} />
+      </div>
     </div>
   );
-}
+};
 
 export default App;

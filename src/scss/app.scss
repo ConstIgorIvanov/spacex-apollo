@@ -1,0 +1,18 @@
+@import './variables';
+@import './libs/normalize';
+
+@import './components/all';
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none !important;
+}
