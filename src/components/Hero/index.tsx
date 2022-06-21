@@ -18,7 +18,7 @@ const Hero: React.FC<HeroProps> = ({ item, explorer }) => {
   if (!item) {
     return (
       <div className="hero">
-        <div className="hero--top">Выберите элемент из списка</div>
+        <div className="hero--top">Select an item from the list</div>
       </div>
     );
   }

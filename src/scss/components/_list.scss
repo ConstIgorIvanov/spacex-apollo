@@ -11,6 +11,7 @@
       display: flex;
       background-color: white;
       padding: 15px 10px;
+
       border: 1px solid gray;
     }
     &__explorers {
@@ -36,14 +37,13 @@
       width: 90%;
       justify-content: space-between;
       font-weight: 700;
+      margin-bottom: 15px;
     }
     &__item span {
       margin-left: 20px;
       font-weight: 400;
     }
-    &__item:not(:last-child) {
-      margin-bottom: 15px;
-    }
+
     &__item:hover {
       transition: $duration;
       transform: scale(1.05);

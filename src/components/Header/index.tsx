@@ -1,11 +1,19 @@
 import React from 'react';
+
 import clsx from 'clsx';
+
+import { useClickAway } from 'ahooks';
 
 const Header: React.FC = () => {
   const [hidden, setHidden] = React.useState(true);
+  const ref = React.useRef<HTMLDivElement>(null);
+
+  useClickAway(() => {
+    setHidden(true);
+  }, ref);
 
   return (
-    <div className="header">
+    <div ref={ref} className="header">
       <div className="header--logo">
         <svg
           style={{ cursor: 'pointer' }}

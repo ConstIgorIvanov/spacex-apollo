@@ -10,25 +10,25 @@ const MissionHero: React.FC<MissionProps> = ({ item }) => {
   return (
     <div className="hero">
       <div className="hero--main">
-        <div>
-          <div>
+        <div className="hero--main__top">
+          <div className="hero--main__element">
             name: <span>{name}</span>
           </div>
-          <div>
+          <div className="hero--main__element">
             id: <span>{id}</span>
           </div>
         </div>
-        <div>
-          <div>
+        <div className="hero--main__bottom">
+          <div className="hero--main__element">
             <span>{description}</span>
           </div>
-          <div>
+          <div className="hero--main__element">
             website:{' '}
             <a href={website} target="_blank" rel="noreferrer">
               {website}
             </a>
           </div>
-          <div>
+          <div className="hero--main__element">
             wikipedia:{' '}
             <a href={wikipedia} target="_blank" rel="noreferrer">
               {wikipedia}

@@ -10,27 +10,27 @@ const DragonHero: React.FC<DragonProps> = ({ item }) => {
   return (
     <div className="hero">
       <div className="hero--main">
-        <div>
-          <div>
+        <div className="hero--main__top">
+          <div className="hero--main__element">
             name: <span>{name}</span>
           </div>
-          <div>
-            active: <span>{active}</span>
+          <div className="hero--main__element">
+            active: <span>{String(active)}</span>
           </div>
-          <div>
+          <div className="hero--main__element">
             id: <span>{id}</span>
           </div>
         </div>
-        <div>
-          <div>
+        <div className="hero--main__bottom">
+          <div className="hero--main__element">
             type:
-            <span>{description}</span>
+            <span>{type}</span>
           </div>
-          <div>
+          <div className="hero--main__element">
             <span>{description}</span>
           </div>
 
-          <div>
+          <div className="hero--main__element">
             wikipedia:{' '}
             <a href={wikipedia} target="_blank" rel="noreferrer">
               {wikipedia}
