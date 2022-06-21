@@ -1,9 +1,6 @@
 import React from 'react';
 
-import { Capsule } from '../../types/capsules';
-import { Dragon } from '../../types/dragons';
-import { Item } from '../../types/explorer';
-import { Mission } from '../../types/missions';
+import { Capsule, Dragon, Item, Mission } from '../../types/explorer';
 
 import CapsuleHero from './Capsule';
 import DragonHero from './Dragon';

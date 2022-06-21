@@ -1,5 +1,5 @@
 .list {
-  width: 45%;
+  width: 50%;
   &--top {
     margin-bottom: 90px;
     display: flex;
@@ -11,7 +11,6 @@
       display: flex;
       background-color: white;
       padding: 15px 10px;
-
       border: 1px solid gray;
     }
     &__explorers {
@@ -23,7 +22,8 @@
   }
   &--main {
     &__container {
-      max-height: 700px;
+      max-height: 70vh;
+
       overflow: auto;
     }
     &__item {
@@ -43,7 +43,6 @@
       margin-left: 20px;
       font-weight: 400;
     }
-
     &__item:hover {
       transition: $duration;
       transform: scale(1.05);

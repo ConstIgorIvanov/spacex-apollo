@@ -1,16 +1,13 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 
+import { Explorer, Item, Mission, Capsule, Dragon } from '../types/explorer';
+
 import { GET_CAPSULES } from '../query/getCapsules';
 import { GET_DRAGONS } from '../query/getDragons';
 import { GET_MISSIONS } from '../query/getMissions';
 
-import { Explorer, Item } from '../types/explorer';
-import { Mission } from '../types/missions';
-import { Capsule } from '../types/capsules';
-import { Dragon } from '../types/dragons';
-
-const useItems = (explorer: Explorer): [Item[], Function, Function] => {
+const useItems = (explorer: Explorer): [Item[]] => {
   const [item, setItem] = React.useState<Item[]>([] as Item[]);
 
   const getExp = () => {
@@ -39,7 +36,7 @@ const useItems = (explorer: Explorer): [Item[], Function, Function] => {
     }
   };
 
-  const { data, loading, refetch } = useQuery(getExp());
+  const { data, loading } = useQuery(getExp());
 
   React.useEffect(() => {
     if (!loading) {
@@ -47,7 +44,7 @@ const useItems = (explorer: Explorer): [Item[], Function, Function] => {
     }
   }, [data]);
 
-  return [item, setItem, refetch];
+  return [item];
 };
 
 export default useItems;

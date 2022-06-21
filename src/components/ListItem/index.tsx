@@ -1,11 +1,8 @@
+import { Item, Capsule, Dragon, Mission } from '../../types/explorer';
+
 import CapsulesItem from './CapsulesItem';
 import DragonsItem from './DragonsItem';
 import MissionItem from './MissionItem';
-
-import { Capsule } from '../../types/capsules';
-import { Dragon } from '../../types/dragons';
-import { Mission } from '../../types/missions';
-import { Item } from '../../types/explorer';
 
 interface ListItemProps<T> {
   item: T;

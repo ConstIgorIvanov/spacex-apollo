@@ -1,5 +1,6 @@
 import React from 'react';
-import { Dragon } from '../../types/dragons';
+
+import { Dragon } from '../../types/explorer';
 
 interface DragonProps {
   item: Dragon;

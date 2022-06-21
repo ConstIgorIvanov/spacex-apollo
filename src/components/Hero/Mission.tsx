@@ -1,5 +1,6 @@
 import React from 'react';
-import { Mission } from '../../types/missions';
+
+import { Mission } from '../../types/explorer';
 
 interface MissionProps {
   item: Mission;

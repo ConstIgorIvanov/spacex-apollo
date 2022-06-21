@@ -1,6 +1,8 @@
-import clsx from 'clsx';
 import React from 'react';
+import clsx from 'clsx';
+
 import { Explorer, Item } from '../../types/explorer';
+
 interface ExplorersProps {
   explorer: string;
   setExplorer: React.Dispatch<React.SetStateAction<Explorer>>;

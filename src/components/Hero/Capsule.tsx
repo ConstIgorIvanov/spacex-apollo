@@ -1,5 +1,6 @@
 import React from 'react';
-import { Capsule } from '../../types/capsules';
+
+import { Capsule } from '../../types/explorer';
 
 interface CapsuleProps {
   item: Capsule;
