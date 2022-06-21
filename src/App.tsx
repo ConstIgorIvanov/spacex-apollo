@@ -13,7 +13,7 @@ import './scss/app.scss';
 
 const App: React.FC = () => {
   const [explorer, setExplorer] = React.useState<Explorer>(Explorer.missions);
-  const [items] = useItems(explorer || Explorer.missions);
+  const [items] = useItems(explorer);
   const [item, setItem] = React.useState<Item | null>(null);
 
   return (
@@ -23,7 +23,7 @@ const App: React.FC = () => {
         <List
           setItem={setItem}
           setExplorer={setExplorer}
-          explorer={explorer || Explorer.missions}
+          explorer={explorer}
           items={items}
           renderItem={(user) => <ListItem setItem={setItem} explorer={explorer} item={user} />}
         />
