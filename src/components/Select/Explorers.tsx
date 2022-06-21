@@ -1,14 +1,20 @@
 import clsx from 'clsx';
 import React from 'react';
-import { Explorer } from '../../types/explorer';
+import { Explorer, Item } from '../../types/explorer';
 interface ExplorersProps {
   explorer: string;
   setExplorer: React.Dispatch<React.SetStateAction<Explorer>>;
+  setItem: React.Dispatch<React.SetStateAction<Item | null>>;
 }
 
 const explorers = ['missions', 'dragons', 'capsules'];
 
-const Explorers: React.FC<ExplorersProps> = ({ explorer, setExplorer }) => {
+const Explorers: React.FC<ExplorersProps> = ({ explorer, setExplorer, setItem }) => {
+  const onClick = (item: Explorer) => {
+    setExplorer(item);
+    setItem(null);
+  };
+
   const [hidden, setHidden] = React.useState(true);
   return (
     <div className="list--top__item">
@@ -73,7 +79,7 @@ const Explorers: React.FC<ExplorersProps> = ({ explorer, setExplorer }) => {
         {explorers.map((item) => (
           <div
             className={clsx('list--top__explorers', hidden && 'hidden')}
-            onClick={() => setExplorer(item as Explorer)}>
+            onClick={() => onClick(item as Explorer)}>
             {item}
           </div>
         ))}

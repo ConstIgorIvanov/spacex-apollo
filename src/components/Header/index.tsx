@@ -1,12 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
-import { Company } from '../../types/company';
 
-interface HeaderProps {
-  company: Company;
-}
-
-const Header: React.FC<HeaderProps> = ({ company }) => {
+const Header: React.FC = () => {
   const [hidden, setHidden] = React.useState(true);
 
   return (
@@ -74,7 +69,7 @@ const Header: React.FC<HeaderProps> = ({ company }) => {
           Founded: <span>{'2002'}</span>
         </div>
         <div>
-          Employees: <span> {'7000'}</span>
+          Employees: <span>{'7000'}</span>
         </div>
         <div>
           Headquarters: <span>{'Address: Rocket Road, City: Hawtgirbe, State: California'}</span>

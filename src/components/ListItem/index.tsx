@@ -5,22 +5,24 @@ import MissionItem from './MissionItem';
 import { Capsule } from '../../types/capsules';
 import { Dragon } from '../../types/dragons';
 import { Mission } from '../../types/missions';
+import { Item } from '../../types/explorer';
 
 interface ListItemProps<T> {
   item: T;
   explorer: string;
+  setItem: React.Dispatch<React.SetStateAction<Item | null>>;
 }
 
-function ListItem<T>({ item, explorer }: ListItemProps<T>) {
+function ListItem<T>({ item, explorer, setItem }: ListItemProps<T>) {
   switch (explorer) {
     case 'missions':
-      return <MissionItem item={item as unknown as Mission} />;
+      return <MissionItem setItem={setItem} item={item as unknown as Mission} />;
     case 'capsules':
-      return <CapsulesItem item={item as unknown as Capsule} />;
+      return <CapsulesItem setItem={setItem} item={item as unknown as Capsule} />;
     case 'dragons':
-      return <DragonsItem item={item as unknown as Dragon} />;
+      return <DragonsItem setItem={setItem} item={item as unknown as Dragon} />;
     default:
-      return <MissionItem item={item as unknown as Mission} />;
+      return <MissionItem setItem={setItem} item={item as unknown as Mission} />;
   }
 }
 
