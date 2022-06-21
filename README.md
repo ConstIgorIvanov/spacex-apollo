@@ -1,4 +1,4 @@
 Learning TS and Apollo with SpaceX GraphQL.
 
-also use: clsx, ahooks (in the future),
+also use: clsx, ahooks,
 mb something else in the future
