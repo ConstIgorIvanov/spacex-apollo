@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/spacex-apollo/static/css/main.12a74264.css",
+    "main.js": "/spacex-apollo/static/js/main.3e79d634.js",
+    "index.html": "/spacex-apollo/index.html",
+    "main.12a74264.css.map": "/spacex-apollo/static/css/main.12a74264.css.map",
+    "main.3e79d634.js.map": "/spacex-apollo/static/js/main.3e79d634.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12a74264.css",
+    "static/js/main.3e79d634.js"
+  ]
+}
