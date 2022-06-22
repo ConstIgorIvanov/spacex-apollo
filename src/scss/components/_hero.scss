@@ -18,12 +18,12 @@
       margin-bottom: 50px;
     }
   }
-}
-.hero span {
-  font-weight: 400;
-  margin-left: 15px;
-}
-.hero a {
-  font-weight: 400;
-  margin-left: 15px;
+  & span {
+    font-weight: 400;
+    margin-left: 15px;
+  }
+  & a {
+    font-weight: 400;
+    margin-left: 15px;
+  }
 }
